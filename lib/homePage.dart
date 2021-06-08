@@ -1,4 +1,5 @@
 import 'package:daily_tasks_app/todayTasks.dart';
+import 'package:daily_tasks_app/userDashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
@@ -30,6 +31,7 @@ class _HomePageState extends State<HomePage> {
         controller: _pageController,
         children: [
           TasksForToday(),
+          UserDashboard(),
         ],
         onPageChanged: (page) {
           setState(() {
