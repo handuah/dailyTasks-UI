@@ -50,13 +50,13 @@ class _UserDashboardState extends State<UserDashboard> {
             child: Column(
               children: [
                 CircleAvatar(
-                  maxRadius: 30.0,
+                  maxRadius: 26.0,
                 ),
                 Text(
                   'Hannah Duah',
                   style: GoogleFonts.poppins(
                     textStyle: TextStyle(
-                      fontSize: 26.0,
+                      fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                       color: HexColor("#000000"),
                     ),
@@ -86,152 +86,136 @@ class _UserDashboardState extends State<UserDashboard> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Material(
-                      elevation: 4.0,
-                      borderRadius: BorderRadius.circular(20.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          color: HexColor("#E1E3FA"),
-                        ),
-                        height: MediaQuery.of(context).size.height * 0.24,
-                        width: MediaQuery.of(context).size.width / 2.3,
-                        // color: Colors.red,
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                            left: MediaQuery.of(context).size.width * 0.02,
-                            right: MediaQuery.of(context).size.width * 0.02,
-                            top: MediaQuery.of(context).size.width * 0.02,
-                          ),
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Material(
-                                  elevation: 2.0,
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Container(
-                                    height: MediaQuery.of(context).size.height *
-                                        0.07,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.2,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                      color: HexColor("#8E96E9"),
-                                    ),
-                                    child: Icon(
-                                      Icons.person_add_outlined,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.02,
-                                ),
-                                Text(
-                                  'Personal',
-                                  style: GoogleFonts.poppins(
-                                    textStyle: TextStyle(
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.w600,
-                                      color: HexColor("#000000"),
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  '6 tasks',
-                                  style: GoogleFonts.poppins(
-                                    textStyle: TextStyle(
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Material(
-                      elevation: 4.0,
-                      borderRadius: BorderRadius.circular(20.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          color: HexColor("#E1E3FA"),
-                        ),
-                        height: MediaQuery.of(context).size.height * 0.24,
-                        width: MediaQuery.of(context).size.width / 2.3,
-                        // color: Colors.red,
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                            left: MediaQuery.of(context).size.width * 0.02,
-                            right: MediaQuery.of(context).size.width * 0.02,
-                            top: MediaQuery.of(context).size.width * 0.02,
-                          ),
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Material(
-                                  elevation: 2.0,
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Container(
-                                    height: MediaQuery.of(context).size.height *
-                                        0.07,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.2,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                      color: HexColor("#8E96E9"),
-                                    ),
-                                    child: Icon(
-                                      Icons.person_add_outlined,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.02,
-                                ),
-                                Text(
-                                  'Personal',
-                                  style: GoogleFonts.poppins(
-                                    textStyle: TextStyle(
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.w600,
-                                      color: HexColor("#000000"),
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  '6 tasks',
-                                  style: GoogleFonts.poppins(
-                                    textStyle: TextStyle(
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+                    DashboardCard("#E1E3FA", "#8E96E9", Icons.person,
+                        "Personal", "6 tasks"),
+                    DashboardCard("#DEF1F8", "#45B5E7",
+                        Icons.shopping_bag_rounded, "Work", "8 tasks"),
                   ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.03,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    DashboardCard("#FEF8F8", "#E78989", Icons.lock_outline,
+                        "Private", "3 tasks"),
+                    DashboardCard("#F2FDF5", "#8AEAA2",
+                        Icons.verified_user_outlined, "Meetings", "4 tasks"),
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.03,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    DashboardCard("#FFF0EB", "#F0A58E",
+                        Icons.add_alert_outlined, "Create Board", "6 tasks"),
+                    DashboardCard("#E1E3FA", "#828BE8",
+                        Icons.calendar_today_outlined, "Events", "18 tasks"),
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.03,
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class DashboardCard extends StatefulWidget {
+  // const _DashboardCard({ Key? key }) : super(key: key);
+  final String cardColor;
+  final String iconBgColor;
+  final IconData taskIcon;
+  final String taskName;
+  final String taskDetails;
+
+  const DashboardCard(this.cardColor, this.iconBgColor, this.taskIcon,
+      this.taskName, this.taskDetails);
+
+  @override
+  _DashboardCardState createState() => _DashboardCardState();
+}
+
+class _DashboardCardState extends State<DashboardCard> {
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      elevation: 4.0,
+      borderRadius: BorderRadius.circular(20.0),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          // color: HexColor("#E1E3FA"),
+          color: HexColor(widget.cardColor),
+        ),
+        height: MediaQuery.of(context).size.height * 0.24,
+        width: MediaQuery.of(context).size.width / 2.3,
+        // color: Colors.red,
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: MediaQuery.of(context).size.width * 0.02,
+            right: MediaQuery.of(context).size.width * 0.02,
+            top: MediaQuery.of(context).size.width * 0.02,
+          ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Material(
+                  elevation: 2.0,
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.07,
+                    width: MediaQuery.of(context).size.width * 0.2,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      // color: HexColor("#8E96E9"),
+                      color: HexColor(widget.iconBgColor),
+                    ),
+                    child: Icon(
+                      // Icons.person_add_outlined,
+                      widget.taskIcon,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Text(
+                  // 'Personal',
+                  widget.taskName,
+                  style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w600,
+                      color: HexColor("#000000"),
+                    ),
+                  ),
+                ),
+                Text(
+                  // '6 tasks',
+                  widget.taskDetails,
+                  style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
