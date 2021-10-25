@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         selectedLabelStyle: TextStyle(
           color: HexColor("#22325f"),
-          fontSize: 14.0,
+          fontSize: 10.0,
         ),
         selectedItemColor: HexColor("#22325f"),
         showSelectedLabels: true,
@@ -56,33 +56,33 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(
               Icons.mail_outlined,
               color: Colors.blueGrey,
-              size: 32.0,
+              size: 24.0,
             ),
             label: '',
             // title: Text('Dashboard'),
             activeIcon: Icon(
               Icons.mail_outlined,
               color: HexColor("#5B67CA"),
-              size: 34.0,
+              size: 24.0,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.file_copy_outlined,
               color: Colors.blueGrey,
-              size: 32.0,
+              size: 24.0,
             ),
             label: '',
             activeIcon: Icon(
               Icons.file_copy_outlined,
               color: HexColor("#5B67CA"),
-              size: 34.0,
+              size: 24.0,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.add_circle_rounded,
-              size: 60.0,
+              size: 40.0,
               color: HexColor("#5B67CA"),
             ),
             label: '',
@@ -95,26 +95,26 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(
               Icons.trending_up_outlined,
               color: Colors.blueGrey,
-              size: 32.0,
+              size: 24.0,
             ),
             label: '',
             activeIcon: Icon(
               Icons.trending_up_outlined,
               color: HexColor("#5B67CA"),
-              size: 34.0,
+              size: 24.0,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.folder_open_outlined,
               color: Colors.blueGrey,
-              size: 32.0,
+              size: 24.0,
             ),
             label: '',
             activeIcon: Icon(
               Icons.folder_open_outlined,
               color: HexColor("#5B67CA"),
-              size: 34.0,
+              size: 24.0,
             ),
           ),
         ],
