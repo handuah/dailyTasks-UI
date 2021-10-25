@@ -14,8 +14,10 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.white,
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        top: true,
+
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -122,7 +124,10 @@ class _LoginState extends State<Login> {
                             color: Colors.grey,
                           ),
                         ),
-                        Text('or with'),
+                        Text(
+                          'or with',
+                          style: TextStyle(color: Colors.grey),
+                        ),
                         Container(
                           height: 2.0,
                           width: MediaQuery.of(context).size.width * 0.3,
@@ -139,14 +144,19 @@ class _LoginState extends State<Login> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        IconButton(
-                          icon: Icon(Icons.gamepad_outlined),
-                          onPressed: () {},
+                        CircleAvatar(
+                          child: Image(
+                            image: NetworkImage(
+                                'https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png'),
+                          ),
+                          backgroundColor: Colors.white,
                         ),
-                        // Icon(Icons.gamepad_outlined),
-                        IconButton(
-                          icon: Icon(Icons.gamepad_outlined),
-                          onPressed: () {},
+                        CircleAvatar(
+                          child: Image(
+                            image: NetworkImage(
+                                'https://toppng.com/uploads/preview/logo-facebook-png-facebook-new-png-logo-11562934578ywpqznc6qq.png'),
+                          ),
+                          backgroundColor: Colors.white,
                         ),
                       ],
                     ),
