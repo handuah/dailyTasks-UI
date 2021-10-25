@@ -29,14 +29,17 @@ class _StartPageState extends State<StartPage> {
 
     return Scaffold(
       backgroundColor: HexColor("#5B67CA"),
-      body: Center(
-        child: Text(
-          'Daily Tasks',
-          style: GoogleFonts.poppins(
-            textStyle: TextStyle(
-              color: Colors.white,
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold,
+      body: SafeArea(
+        top: true,
+        child: Center(
+          child: Text(
+            'Daily Tasks',
+            style: GoogleFonts.poppins(
+              textStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
