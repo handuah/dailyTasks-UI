@@ -13,116 +13,118 @@ class UserDashboard extends StatefulWidget {
 class _UserDashboardState extends State<UserDashboard> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: MediaQuery.of(context).size.width * 0.04,
-        right: MediaQuery.of(context).size.width * 0.04,
-        top: MediaQuery.of(context).size.width * 0.04,
-      ),
-      child: ListView(
-        scrollDirection: Axis.vertical,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Material(
-                elevation: 2.0,
-                borderRadius: BorderRadius.circular(20.0),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.04,
-                  width: MediaQuery.of(context).size.width * 0.10,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: HexColor("#FFFFFF"),
-                  ),
-                  child: Icon(
-                    Icons.more_horiz_rounded,
-                    color: Colors.black,
+    return SafeArea(
+      top: true,
+      child: Padding(
+        padding: EdgeInsets.only(
+          left: MediaQuery.of(context).size.width * 0.04,
+          right: MediaQuery.of(context).size.width * 0.04,
+        ),
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Material(
+                  elevation: 2.0,
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.04,
+                    width: MediaQuery.of(context).size.width * 0.10,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      color: HexColor("#FFFFFF"),
+                    ),
+                    child: Icon(
+                      Icons.more_horiz_rounded,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
+              ],
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.04,
+            ),
+            Center(
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    maxRadius: 26.0,
+                  ),
+                  Text(
+                    'Hannah Duah',
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.bold,
+                        color: HexColor("#000000"),
+                      ),
+                    ),
+                  ),
+                  Text(
+                    'handuah@gmail.com',
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.normal,
+                        color: HexColor("#000000"),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.04,
-          ),
-          Center(
-            child: Column(
-              children: [
-                CircleAvatar(
-                  maxRadius: 26.0,
-                ),
-                Text(
-                  'Hannah Duah',
-                  style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.bold,
-                      color: HexColor("#000000"),
-                    ),
-                  ),
-                ),
-                Text(
-                  'handuah@gmail.com',
-                  style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.normal,
-                      color: HexColor("#000000"),
-                    ),
-                  ),
-                ),
-              ],
             ),
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.03,
-          ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    DashboardCard("#E1E3FA", "#8E96E9", Icons.person,
-                        "Personal", "6 tasks"),
-                    DashboardCard("#DEF1F8", "#45B5E7",
-                        Icons.shopping_bag_rounded, "Work", "8 tasks"),
-                  ],
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.03,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    DashboardCard("#FEF8F8", "#E78989", Icons.lock_outline,
-                        "Private", "3 tasks"),
-                    DashboardCard("#F2FDF5", "#8AEAA2",
-                        Icons.verified_user_outlined, "Meetings", "4 tasks"),
-                  ],
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.03,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    DashboardCard("#FFF0EB", "#F0A58E",
-                        Icons.add_alert_outlined, "Create Board", "6 tasks"),
-                    DashboardCard("#E1E3FA", "#828BE8",
-                        Icons.calendar_today_outlined, "Events", "18 tasks"),
-                  ],
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.03,
-                ),
-              ],
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.03,
             ),
-          ),
-        ],
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      DashboardCard("#E1E3FA", "#8E96E9", Icons.person,
+                          "Personal", "6 tasks"),
+                      DashboardCard("#DEF1F8", "#45B5E7",
+                          Icons.shopping_bag_rounded, "Work", "8 tasks"),
+                    ],
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      DashboardCard("#FEF8F8", "#E78989", Icons.lock_outline,
+                          "Private", "3 tasks"),
+                      DashboardCard("#F2FDF5", "#8AEAA2",
+                          Icons.verified_user_outlined, "Meetings", "4 tasks"),
+                    ],
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      DashboardCard("#FFF0EB", "#F0A58E",
+                          Icons.add_alert_outlined, "Create Board", "6 tasks"),
+                      DashboardCard("#E1E3FA", "#828BE8",
+                          Icons.calendar_today_outlined, "Events", "18 tasks"),
+                    ],
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
